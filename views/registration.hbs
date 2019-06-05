@@ -1,0 +1,53 @@
+{{> header}}
+  <div class="container-fluid-bg ">
+
+            		<div class="row justify-content-center align-items-center text text-light">
+            			<div class ="col-md-4 col-sm-4 col-xs-12 ">
+                
+
+                    <form  id="signup-form">
+                        <h2 class="form-title">Register</h2>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Your Name"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"/>
+                            
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password"/>
+                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="re_password" id="re_password" placeholder="Repeat your password"/>
+                        </div>
+                        	<div class="form-group">
+                                <input type="date" class="form-control" id="Inputdob" placeholder="Date of Birth">
+                        	</div>
+                        <div class="form-group">
+                        	<input type="radio" class="" name="reg_gender" id="male" placeholder="username">
+						   <label for="male">Male</label>
+						
+						   <input type="radio" class="" name="reg_gender" id="female" placeholder="username">
+						   <label for="female">Female</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                        </div>
+                        <div class="form-group">
+                        	<input type=button name="submit" id="submit" class="form-submit btn btn-success btn-block" onClick='' value='Sign up'>
+                        </div>
+                    </form>
+                    <p class="loginhere">
+                        Have already an account ? <a href="login" class="loginhere-link">Login here</a>
+                    </p>
+                
+            </div>
+        </div>
+    </div>
+       
+</body>
+</html>

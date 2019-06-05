@@ -1,0 +1,55 @@
+<div class= "container-fluid-bg "id=div1>
+		<div class= "row justify-content-center align-items-center">
+
+				<div class ="col-md-4 col-sm-4 col-xs-12 ">
+
+				 <form id="Recover_pass">
+				 		 <h2 class="form-title" id="r1">Recover Password</h2>
+ 				<div class="form-group">
+    				<label for="RInputEmail" class ="text text-light">Recovery Email</label>
+    				<input type="email" class="form-control " id="RInputEmail"  placeholder="Enter Email">	
+  				</div>
+
+  					<div class="form-group">
+  						
+  						<label for="secure_code" class ="text text-light">Security Code</label>
+  						<input type="Numbers" class="form-control " id="secure_code"  placeholder="Enter code">	
+  					</div>
+                      <div class="form-group">
+                        	<input type=button name="reset" id="submit2" class="form-submit btn btn-success btn-block" onClick="toggle_visibility('div1', 'div2');" value='Reset'>
+                        </div>
+  				
+
+  				</div>
+  			</div>
+  			</div>
+
+  			<div class= "container-fluid-bg " id="div2">
+		<div class= "row justify-content-center align-items-center">
+
+				<div class ="col-md-4 col-sm-4 col-xs-12 ">
+
+				 <form id="Recover_pass">
+				 		 <h2 class="form-title "id ="r2">New Password</h2>
+ 				
+  					<div class="form-group">
+  					  <label for="RInputPassword" class="text text-light">New Password</label>
+    					<input type="password" class="form-control" id="RInputPassword" placeholder="Password">
+  					</div>
+  						<div class="form-group">
+  					  <label for="rRInputPassword" class="text text-light">Repeat Password</label>
+    					<input type="password" class="form-control" id="rRInputPassword" placeholder="Password">
+  					</div>
+                       <div class="form-group">
+                        	<input type=button name="reset" id="submit3" class="form-submit btn btn-success btn-block" onClick="toggle_visibility('div2', 'login-div');" value='Confirm'>
+                        </div>
+  				
+
+  				</div>
+  			</div>
+  			</div>
+              
+
+
+</body>
+</html>
