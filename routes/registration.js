@@ -13,19 +13,19 @@ router.post('/', upload.single('profilepic'), (req, res) => {
     // validation of form
     req.check('name', 'Minimum name length should be 4').isLength({ min: 4 });
     req.check('password', 'Minimum password length should be 4').isLength({ min: 8 });
-    req.check('email');
+
     //if email is already taken then dont register the new user
-    // req.check('email')
-    //     .isEmail().withMessage('Please enter a valid email address')
-    //     .trim()
-    //     .normalizeEmail()
-    //     .custom(value => {
-    //         return finduserByEmail(value).then(user => {
-    //             //if user email already exists throw an error
-    //         })
-    //     });
-    req.check('dob', 'Date of birth is required').isLength({ min: 1 });
-    req.check('gender', 'Required').isLength({ min: 1 });
+    req.check('email')
+        .isEmail().withMessage('Please enter a valid email address')
+        .trim()
+        .normalizeEmail()
+        .custom(value => {
+            return finduserByEmail(value).then(user => {
+                //if user email already exists throw an error
+            })
+        });
+    req.check('dob', 'Date of birth is required');
+    req.check('gender', 'Required');
 
     var errors = req.validationErrors();
 
