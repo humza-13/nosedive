@@ -30,7 +30,6 @@ router.post('/', upload.single('profilepic'), (req, res) => {
     var errors = req.validationErrors();
 
     if (errors) res.redirect('/login?password_format=invalid&user_format=invalid');
-
     //creat new user 
     else {
         var newuser = new user({
@@ -38,9 +37,8 @@ router.post('/', upload.single('profilepic'), (req, res) => {
             email: req.body.email,
             password: req.body.password,
             dob: req.body.dob,
-            gender: req.body.gender,
+            gender: req.body.reg_gender,
             profilepic: req.file.filename
-
         });
 
         //saving in database 
@@ -55,7 +53,7 @@ router.post('/', upload.single('profilepic'), (req, res) => {
                             req.session.name = user.name,
                             req.session.profilepic = user.profilepic,
                             req.session.gender = user.gender,
-                            res.redirect('test.hbs');
+                            res.redirect('test');
                     });
 
 

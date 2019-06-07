@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var { mongoose } = require('./../db_ models/mongoose');
-var { userSchema } = require('./../db_ models/user');
+var { user } = require('./../db_ models/user');
 
 router.get('/', (req, res) => {
     res.render('login.hbs');
