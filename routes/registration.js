@@ -37,11 +37,10 @@ router.post('/', upload.single('profilepic'), (req, res) => {
             email: req.body.email,
             password: req.body.password,
             dob: req.body.dob,
-            gender: req.body.reg_gender,
+            gender: req.body.gender,
             profilepic: req.file.filename
         });
-        console.log(`name ${req.body.name}`);
-        console.log(`password ${req.body.password}`);
+
         //saving in database 
         newuser.save()
             .then((doc) => {
@@ -54,7 +53,7 @@ router.post('/', upload.single('profilepic'), (req, res) => {
                             req.session.name = user.name,
                             req.session.profilepic = user.profilepic,
                             req.session.gender = user.gender,
-                            res.redirect('test');
+                            res.redirect('./../views/test.hbs');
                     });
 
 
