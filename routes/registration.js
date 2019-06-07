@@ -40,7 +40,8 @@ router.post('/', upload.single('profilepic'), (req, res) => {
             gender: req.body.reg_gender,
             profilepic: req.file.filename
         });
-
+        console.log(`name ${req.body.name}`);
+        console.log(`password ${req.body.password}`);
         //saving in database 
         newuser.save()
             .then((doc) => {
