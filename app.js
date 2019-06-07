@@ -5,6 +5,7 @@ const body_parser = require('body-parser');
 const session = require('express-session');
 const validator = require('express-validator');
 var login = require('./routes/login');
+var registration = require('./routes/registration');
 
 
 //setting
@@ -23,7 +24,8 @@ app.use(validator());
 app.use(session({ secret: 'max', saveUninitialized: false, resave: false }));
 app.use(express.static(__dirname + '/public'));
 app.use('/login', login);
-app.use(express.static(__dirname + '/db_models'));
+app.use('/registration', registration);
+
 
 
 //port 

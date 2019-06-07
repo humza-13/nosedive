@@ -1,8 +1,8 @@
 var express = require('express');
-var router = express.Router;
-var { mongoose } = require('./db_models/mongoose');
-var { userSchema } = require('./db_models/userSchema');
-//user = require('./db_models/userSchema');
+var router = express.Router();
+var { mongoose } = require('./../db_ models/mongoose');
+var { userSchema } = require('./../db_ models/user');
+
 router.get('/', (req, res) => {
     res.render('login.hbs');
 
@@ -11,20 +11,17 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
 
     //validation
-    req.check('password', 'Password should be of 8 characters').islenght({ min: 8 });
+    req.check('password', 'Minimum length of user should be 8').isLength({ min: 8 });
 
     // gettting any errors
     var errors = req.validationErrors();
 
-    if (errors) res.redirect('/login?password_format=invalid&username_format=invalid');
+    if (errors) res.redirect('/login?password_format=invalid&user_format=invalid');
 
     else {
         user.findOne({
                 email: req.body.email,
-
-                password: user.comparePassword('req.body.password', function(err, isMatch) {
-                    if (err) throw err
-                })
+                password: req.body.password
             })
             .then((user) => {
                 if (!user) res.redirect('login?login_failed_username_or_password_incorrect');

@@ -5,9 +5,10 @@
             			<div class ="col-md-4 col-sm-4 col-xs-12 ">
                 
 
-                    <form  id="signup-form">
+                    <form  id="signup-form" action="/signup" method="POST" enctype="multipart/form-data">
                         <h2 class="form-title">Register</h2>
 
+                        <input type="file" name="profilepic">
                         <div class="form-group">
                             <input type="text" class="form-control" name="name" id="name" placeholder="Your Name"/>
                         </div>
@@ -38,7 +39,7 @@
                             <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                         </div>
                         <div class="form-group">
-                        	<input type=button name="submit" id="submit" class="form-submit btn btn-success btn-block" onClick='' value='Sign up'>
+                        	<input type="submit" name="submit" id="submit" class="form-submit btn btn-success btn-block" value='Sign up'>
                         </div>
                     </form>
                     <p class="loginhere">

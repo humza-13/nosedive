@@ -5,7 +5,7 @@ html {
     background-color: #333333;
     margin-top: 10px;
     font-family: "proxima-nova", "Source Sans Pro", sans-serif;
-    background-image: url('sample.jpg');
+    background-image: url('./img/sample.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

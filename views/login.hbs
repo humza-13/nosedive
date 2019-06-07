@@ -5,7 +5,7 @@
 
 				<div class ="col-md-4 col-sm-4 col-xs-12 ">
 
-				 <form id="login">
+				 <form id="login" action="/login" method="POST">
 				 	 <h2 class="form-title" id="l1">Login</h2>
 
  				<div class="form-group">
@@ -30,8 +30,8 @@
 								 <p id="reset-button"> <a onClick="toggle_visibility('login-div','div1');">Forgotten Password?</a></p>
 							<p> <a href="registration">Sign up</a></p>
 			             </div>
-  						<input type=button id="submit" class="btn btn-success btn-block" onClick="parent.location='Main'" value='Login'>
-							<input type=button id="submit1" class="btn btn-success btn-block" onClick= {googleSignIn()} value='Sign up with Goggle'>
+  						<input type="submit" id="submit" class="btn btn-success btn-block" value='Login'>
+						
 
 				
 				 </form>
