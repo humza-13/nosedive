@@ -10,7 +10,10 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
 
-    //validation
+
+    console.log(req.body.email),
+        console.log(req.body.password)
+        //validation
     req.check('password', 'Minimum length of user should be 8').isLength({ min: 8 });
 
     // gettting any errors
@@ -30,8 +33,11 @@ router.post('/', (req, res) => {
                     req.session.email = user.email;
                     req.session.profilepic = user.profilepic;
                     req.session.name = user.name;
-                    req.session.profilelink = user.profilelink
-                    res.redirect('./views/test.hbs');
+                    req.session.profilelink = user.profilelink,
+                        req.session.dob = user.dob,
+                        req.session.gender = user.gender
+
+                    res.redirect('chat');
                 }
             });
     }

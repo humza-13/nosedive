@@ -1,9 +1,6 @@
 body,
 html {
-    padding-top: 10px;
-    color: #ffffff;
-    background-color: #333333;
-    margin-top: 10px;
+    height: 100%;
     font-family: "proxima-nova", "Source Sans Pro", sans-serif;
     background-image: url('./img/sample.jpg');
     background-repeat: no-repeat;
@@ -11,19 +8,33 @@ html {
     background-position: center;
     background-position-x: center;
     background-position-y: center;
+    color: #ffffff;
+    background-color: #333333;
+}
+
+form {
+    margin-top: 0.75rem;
+}
+
+#chat-messages li {
+    padding: 0.75rem;
+}
+
+
+/* -------------------------------------------------------------------------------------------------- */
+
+.btn-link {
+    color: #ffffff;
 }
 
 #frame {
-    width: 95%;
-    min-width: 360px;
-    max-width: 1000px;
-    height: 92vh;
-    min-height: 300px;
-    max-height: 720px;
+    width: 100%;
+    height: 100vh;
     background: #E6EAEA;
+    background-size: cover;
 }
 
-#media screen and (max-width: 360px) {
+@media screen and (max-width: 360px) {
     #frame {
         width: 100%;
         height: 100vh;
@@ -42,7 +53,7 @@ html {
     position: relative;
 }
 
-#media screen and (max-width: 735px) {
+@media screen and (max-width: 735px) {
     #frame #sidepanel {
         width: 58px;
         min-width: 58px;
@@ -54,7 +65,7 @@ html {
     margin: 25px auto;
 }
 
-#media screen and (max-width: 735px) {
+@media screen and (max-width: 735px) {
     #frame #sidepanel #profile {
         width: 100%;
         margin: 0 auto;
@@ -91,7 +102,7 @@ html {
     transition: 0.3s height ease;
 }
 
-#media screen and (max-width: 735px) {
+@media screen and (max-width: 735px) {
     #frame #sidepanel #profile .wrap {
         height: 55px;
     }
@@ -111,7 +122,7 @@ html {
     transition: 0.3s border ease;
 }
 
-#media screen and (max-width: 735px) {
+@media screen and (max-width: 735px) {
     #frame #sidepanel #profile .wrap img {
         width: 40px;
         margin-left: 4px;
@@ -139,7 +150,7 @@ html {
     margin-left: 15px;
 }
 
-#media screen and (max-width: 735px) {
+@media screen and (max-width: 735px) {
     #frame #sidepanel #profile .wrap p {
         display: none;
     }
@@ -175,7 +186,7 @@ html {
     transition: 0.3s all ease;
 }
 
-#media screen and (max-width: 735px) {
+@media screen and (max-width: 735px) {
     #frame #sidepanel #profile .wrap #status-options {
         width: 58px;
         margin-top: 57px;
@@ -610,7 +621,7 @@ html {
     width: 100%;
     height: 60px;
     line-height: 60px;
-    background: #f5f5f5;
+    background: #95a5a6;
 }
 
 #frame .content .contact-profile img {
@@ -775,8 +786,18 @@ html {
     width: 50px;
     padding: 12px 0;
     cursor: pointer;
-    background: #32465a;
+    /* background: #32465a; */
     color: #f5f5f5;
+}
+
+.submit-input {
+    float: right;
+    width: 25%;
+    background: #ccc;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 735px) {
@@ -793,12 +814,94 @@ html {
     outline: none;
 }
 
+.blogShort {
+    border-bottom: 1px solid #ddd;
+}
+
+.add {
+    background: #333;
+    padding: 10%;
+    height: 300px;
+}
+
+.nav-sidebar {
+    width: 100%;
+    padding: 8px 0;
+    border-right: 1px solid #ddd;
+}
+
+.nav-sidebar a {
+    color: #333;
+    -webkit-transition: all 0.08s linear;
+    -moz-transition: all 0.08s linear;
+    -o-transition: all 0.08s linear;
+    transition: all 0.08s linear;
+}
+
+.nav-sidebar .active a {
+    cursor: default;
+    background-color: #34ca78;
+    color: #fff;
+}
+
+.nav-sidebar .active a:hover {
+    background-color: #37D980;
+}
+
+.nav-sidebar .text-overflow a,
+.nav-sidebar .text-overflow .media-body {
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.btn-blog {
+    color: #ffffff;
+    background-color: #37d980;
+    border-color: #37d980;
+    border-radius: 0;
+    margin-bottom: 10px
+}
+
+.btn-blog:hover,
+.btn-blog:focus,
+.btn-blog:active,
+.btn-blog.active,
+.open .dropdown-toggle.btn-blog {
+    color: white;
+    background-color: #34ca78;
+    border-color: #34ca78;
+}
+
+h2 {
+    color: #34ca78;
+}
+
+.margin10 {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+
+/* ----------------------------------------------------------------------------------------- */
+
 .row {
     padding: 60px 60px;
 }
 
 .container-fluid-bg {
     padding: 40px 40px;
+    color: darkgray;
+}
+
+#chat-container {
+    padding: 40px 40px;
+    color: darkgray;
+}
+
+#chat-messages li {
+    padding: 0.75rem;
 }
 
 #submit,
@@ -812,6 +915,15 @@ html {
     fill: dimgrey;
 }
 
+#contentdiv {
+    background-image: url('./img/urban.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-x: center;
+    background-position-y: center;
+}
+
 #name,
 #email,
 #password,
@@ -821,7 +933,9 @@ html {
 #Inputdob,
 #RInputPassword,
 #rRInputPassword,
-#RInputEmail {
+#RInputEmail,
+#name,
+#message {
     background-color: white;
     font-weight: normal;
     font-size: 16;
@@ -884,4 +998,298 @@ a {
 
 #reset-button {
     color: rgb(100, 151, 4);
+}
+
+
+/* header and search page css */
+
+header {
+    min-height: 50px;
+    background: #4F5467;
+    font-size: 14px;
+    padding: 15px 130px 10px 370px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+header,
+header a,
+header a:link,
+header a:visited,
+header a:focus {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+header .search {
+    float: left;
+    margin: 0px;
+}
+
+header .fa {
+    font-size: 18px;
+}
+
+header div {
+    float: right;
+}
+
+header .second-icon {
+    margin-right: 60px;
+}
+
+header .menu-icon {
+    margin-top: 3px;
+}
+
+header .dropdown-menu,
+header .dropdown-menu a,
+header .dropdown-menu a:link,
+header .dropdown-menu a:focus,
+header .dropdown-menu a:visited {
+    color: #404040;
+}
+
+header .dropdown-menu {
+    padding: 0px;
+    min-width: 220px;
+    text-align: center;
+}
+
+header .dropdown-menu li,
+header .dropdown-menu li a {
+    display: block;
+    overflow: hidden;
+}
+
+.dropdown-menu>li>a {
+    padding: 8px 20px;
+}
+
+.dropdown-menu .divider {
+    margin: 0px;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.badge {
+    padding: 4px 8px;
+    font-size: 11px;
+}
+
+header .badge {
+    position: absolute;
+    top: -8px;
+    right: -12px;
+}
+
+.new-not {
+    background: #ffeab6;
+}
+
+.search input {
+    width: 200px;
+    border-radius: 10px;
+    border: 0px;
+    color: #404040;
+    font-size: 13px;
+    padding: 5px;
+    padding-bottom: 3px;
+}
+
+.sidebar-nav {
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    width: 240px;
+    top: 0px;
+    padding: 50px 10px 0px 10px;
+    background: #ffffff;
+    z-index: 99;
+}
+
+.people-nearby .google-maps {
+    background: #f8f8f8;
+    border-radius: 4px;
+    border: 1px solid #f1f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.people-nearby .google-maps .map {
+    height: 300px;
+    width: 100%;
+    border: none;
+}
+
+.people-nearby .nearby-user {
+    padding: 20px 0;
+    border-top: 1px solid #f1f2f2;
+    border-bottom: 1px solid #f1f2f2;
+    margin-bottom: 20px;
+}
+
+img.profile-photo-lg {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.friends-div {
+    margin-top: 70px;
+}
+
+.nearby-user-wrapper {
+    padding: 20px 17px;
+}
+
+.create-post textarea {
+    height: 100px;
+}
+
+.create-post {
+    width: 80%;
+}
+
+.create-post button {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 770px) {
+    .friends-div {
+        margin-top: 110px;
+    }
+    .nearby-user-wrapper {
+        padding: 20px 70px;
+    }
+    .nearby-user-wrapper .col-xs-3 {
+        padding-top: 15px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .nearby-user .col-xs-7 {
+        padding: 15px 50px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .nearby-user-wrapper {
+        padding: 20px 50px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .nearby-user-wrapper {
+        padding: 20px 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .nearby-user-wrapper {
+        padding: 20px 10px;
+    }
+}
+
+
+/*----------------------------------------------------------------
+6. Settings
+-----------------------------------------------------------------*/
+
+.modal-dialog {
+    width: 700px;
+}
+
+.modal-header {
+    background: #4F5467;
+    color: #ffffff;
+}
+
+.modal-row {
+    margin-top: 25px;
+}
+
+.modal-row p {
+    margin-top: 8px;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+.profile {
+    min-height: 355px;
+    display: inline-block;
+}
+
+figcaption.ratings {
+    margin-top: 20px;
+}
+
+figcaption.ratings a {
+    color: #f1c40f;
+    font-size: 11px;
+}
+
+figcaption.ratings a:hover {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+.divider {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emphasis {
+    border-top: 4px solid transparent;
+}
+
+.emphasis:hover {
+    border-top: 4px solid #1abc9c;
+}
+
+.emphasis h2 {
+    margin-bottom: 0;
+}
+
+span.tags {
+    background: #1abc9c;
+    border-radius: 2px;
+    color: #f5f5f5;
+    font-weight: bold;
+    padding: 2px 4px;
+}
+
+.dropdown-menu {
+    background-color: #34495e;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    width: 250px;
+    margin-left: -125px;
+    left: 50%;
+}
+
+.dropdown-menu .divider {
+    background: none;
+}
+
+.dropdown-menu>li>a {
+    color: #f5f5f5;
+}
+
+.dropup .dropdown-menu {
+    margin-bottom: 10px;
+}
+
+.dropup .dropdown-menu:before {
+    content: "";
+    border-top: 10px solid #34495e;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -10px;
+    z-index: 10;
 }

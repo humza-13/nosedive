@@ -1,4 +1,3 @@
-//requirign the mangoose module
 let mongoose = require('mongoose');
 
 

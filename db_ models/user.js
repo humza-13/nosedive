@@ -28,10 +28,14 @@ let user = mongoose.model('user', {
         type: String,
         required: true
     },
-    profilepic: String
+    profilepic: String,
+
+    profilelink: String
+
 
 
 });
+
 
 
 

@@ -38,7 +38,8 @@ router.post('/', upload.single('profilepic'), (req, res) => {
             password: req.body.password,
             dob: req.body.dob,
             gender: req.body.gender,
-            profilepic: req.file.filename
+            profilepic: req.file.filename,
+            profilelink: req.body.username
         });
 
         //saving in database 
@@ -53,12 +54,16 @@ router.post('/', upload.single('profilepic'), (req, res) => {
                             req.session.name = user.name,
                             req.session.profilepic = user.profilepic,
                             req.session.gender = user.gender,
-                            res.redirect('./../views/test.hbs');
+                            req.session.profilelink = user.profilelink,
+                            req.session.dob = user.dob
+
+                        res.redirect('chat');
                     });
 
 
             }, (e) => {
                 console.log('Unable to signup');
+                res.redirect('/login?password_format=invalid&user_format=invalid');
             });
     }
 });

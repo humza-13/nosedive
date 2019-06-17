@@ -1,0 +1,31 @@
+{{> header}}
+<body >
+  {{>navbar}}
+    <div class="container friends-div">
+      <div class="row">
+        {{#if users}}
+          {{#each users}}
+            <div class="col-md-8 nearby-user-wrapper">
+                <div class="nearby-user">
+                  <div class="row">
+                    <div class="col-xs-2">
+                      <img src="img/{{this.profilepic}}" alt="user" class="profile-photo-lg">
+                    </div>
+                    <div class="col-xs-7">
+                      <h5><a href="/user/{{this.profilelink}}" class="profile-link"><b>{{this.name}}</b></a></h5>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          {{/each}}
+        {{else}}
+          <div>
+            <h2>No Users Found</h2>
+          </div>
+        {{/if}}
+        
+    </div>
+	</div>
+</div>
+</body>
+</html>
