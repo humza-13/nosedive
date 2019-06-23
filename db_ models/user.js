@@ -36,9 +36,4 @@ let user = mongoose.model('user', {
 
 });
 
-
-
-
-
-
 module.exports = { user };

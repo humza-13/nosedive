@@ -4,9 +4,6 @@ const { mongoose } = require('./../db_ models/mongoose');
 var { user } = require('./../db_ models/user');
 
 
-
-
-
 router.get('/', (req, res) => {
     if (req.session.email) {
 
