@@ -18,7 +18,7 @@
         "express-validator": "^5.3.1",
         "hbs": "^4.0.4",
         "mangodb": "^1.0.0",
-        "mongoose": "^5.5.12",
+        "mongoose": "^5.7.5",
         "multer": "^1.4.1",
         "nodemon": "^1.19.1",
         "pug": "^2.0.3",
